@@ -59,7 +59,7 @@ VariantSpec __makeVariantSpec(ConstructorElement ctor) {
 }
 
 UnionSpec makeUnionSpec(Element element, ConstantReader annotation) {
-  if (element is ClassElement && !element.isMixin && !element.isEnum) {
+  if (element is ClassElement && !element.isMixinClass && !element.isDartCoreEnum) {
     final unionName = element.name;
 
     final variants = element.constructors
